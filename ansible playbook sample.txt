@@ -10,6 +10,18 @@
         path: "{{location}}"
         state: directory
 
+---
+- name: create new folder
+  hosts: localhost
+  become: yes
+  vars:
+    location: '/home/ubuntu/arun/new/temp'
+  tasks:
+    - name: create new folder name temp
+      ansible.builtin.file:
+        path: "{{location}}"
+        state: directory
+
 
 	
 
